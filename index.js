@@ -21,7 +21,7 @@ function logger(req, res, next) {
 }
 
 function checkPermission(role) {
-    return function check(req, res, next) {
+  return function check(req, res, next) {
     if (req.path == "/libraries") {
       req.permission = true;
     }
@@ -29,7 +29,7 @@ function checkPermission(role) {
       req.permission = true;
     }
     next();
-  }
+  };
 }
 
 app.listen(4000, () => {
