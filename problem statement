@@ -1,0 +1,15 @@
+you need to create 3 route handlers as given below
+
+GET /books => this should return response of { route: "/books"}
+
+GET / libraries => this should return response of { route: "/libraries", permission: true}
+
+GET /authors => this should return response of { route: "/authors", permission: true}
+
+You need to create a logger middleware that will work for all route handlers and it will log request path ( this was shown in the live class on Friday )
+
+You need to create one more middleware called checkPermission and this will work on only 2 route handlers GET /libraries and GET /authors and in the middleware we will also pass some data which is like checkPermission("librarian") for GET /libraries and checkPermission("author") for GET /author
+
+In the checkPermission middleware if the path is /libraries then we will add permission: true to the request object and use it for showing the response in the route handler and if the path is /authors then we will add permission: true to the request object and use it for showing the response in the route handler.
+
+HINT :- All of this is taught in the class if you have understood the lecture.
